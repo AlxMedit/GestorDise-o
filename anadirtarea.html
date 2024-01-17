@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Añadir nueva tarea</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Gestor de tareas</h1>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="anadirtarea.html">Añadir tarea</a></li>
+        </ul>
+    </header>
+
+    <form class="nuevatarea">
+        <label for="nombretarea">Título de la tarea:</label><br>
+        <input id="nombretarea" type="text" placeholder="Título de la tarea" pattern="[AZaz]" required><br>
+
+        <label for="modulo">Módulo:</label><br>
+        <select id="modulo" name="modulo" required>
+            <option value="DWEC">DWEC</option>
+            <option value="DWES">DWES</option>
+            <option value="DISEÑO">DISEÑO</option>
+            <option value="DESPLIEGUE">DESPLIEGUE</option>
+            <option value="EIE">EIE</option>
+            <option value="HLC">HLC</option>
+        </select><br>
+
+        <label for="fechaentrega">Fecha de entrega:</label><br>
+        <input id="fechaentrega" type="date" required><br>
+
+        <label for="informacion">Información sobre la tarea:</label><br>
+        <textarea id="informacion" placeholder="Información sobre la tarea" required></textarea><br>
+
+        <input type="submit" value="Guardar tarea">
+    </form>
+</body>
+</html>

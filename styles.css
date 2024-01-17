@@ -1,0 +1,166 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("imagenes/fondo.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    margin: 0px;
+    padding: 20px;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li input {
+    padding: 10px;
+    width: 250px;
+    margin-top: 1%;
+    box-sizing: border-box;
+}
+
+.nuevatarea {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    width: 300px;
+    margin-top: 2%;
+    background-color: darkblue;
+    border-radius: 8px;
+}
+
+.nuevatarea label,
+.nuevatarea input,
+.nuevatarea select,
+.nuevatarea textarea {
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.nuevatarea input:invalid,
+.nuevatarea textarea:invalid {
+    border: 2px solid red;
+}
+
+.nuevatarea input:valid,
+.nuevatarea textarea:valid {
+    border: 2px solid green;
+}
+
+.nuevatarea input[type="submit"]:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.nuevatarea input[type="submit"]:not(:disabled) {
+    background-color: white;
+    color: black;
+}
+
+.nuevatarea label[for="nombretarea"]:after,
+.nuevatarea label[for="modulo"]:after,
+.nuevatarea label[for="fechaentrega"]:after,
+.nuevatarea label[for="informacion"]:after {
+    content: " *";
+    color: red;
+}
+
+
+.filtro {
+    gap: 10px;
+    margin-top: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.imagenModBor {
+    height: 15px;
+}
+
+.padre {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.tarea {
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: darkblue
+}
+
+.tarea>h2 {
+    margin-bottom: 10px;
+}
+
+.tarea>h3 {
+    margin-bottom: 10px;
+}
+
+ul>li:hover {
+    background-color: #555;
+}
+
+.botonAccion:hover {
+    background-color: blueviolet;
+    color: white;
+}
+
+input[type="checkbox"]:checked+label {
+    color: green;
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1279px) {
+    .padre {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .padre {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .nuevatarea label,
+    .nuevatarea input,
+    .nuevatarea select,
+    .nuevatarea textarea {
+        margin-bottom: 10px;
+        height: 75px;
+        box-sizing: border-box;
+        padding: 20px;
+    }
+}
